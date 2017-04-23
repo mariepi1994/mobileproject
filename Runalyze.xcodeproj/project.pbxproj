@@ -15,6 +15,12 @@
 		9B50049D1EA06B7A00E071A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B50049B1EA06B7A00E071A6 /* LaunchScreen.storyboard */; };
 		9B5004A81EA06B7A00E071A6 /* RunalyzeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5004A71EA06B7A00E071A6 /* RunalyzeTests.swift */; };
 		9B5004B31EA06B7A00E071A6 /* RunalyzeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5004B21EA06B7A00E071A6 /* RunalyzeUITests.swift */; };
+		9B5004C11EA079D900E071A6 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5004C01EA079D900E071A6 /* ProfileTableViewCell.swift */; };
+		9BBB45671EA442C400616F8F /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB45661EA442C400616F8F /* WeatherTableViewCell.swift */; };
+		9BBB45691EA4686000616F8F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB45681EA4686000616F8F /* LoginViewController.swift */; };
+		9BBB45A81EABED7400616F8F /* GraphTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB45A71EABED7400616F8F /* GraphTableViewCell.swift */; };
+		9BBB45AA1EABF17600616F8F /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB45A91EABF17600616F8F /* OverviewViewController.swift */; };
+		9BBB45AC1EABF72F00616F8F /* RunTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB45AB1EABF72F00616F8F /* RunTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		9B5004AE1EA06B7A00E071A6 /* RunalyzeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunalyzeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B5004B21EA06B7A00E071A6 /* RunalyzeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunalyzeUITests.swift; sourceTree = "<group>"; };
 		9B5004B41EA06B7A00E071A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B5004C01EA079D900E071A6 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		9BBB45661EA442C400616F8F /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
+		9BBB45681EA4686000616F8F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9BBB45A71EABED7400616F8F /* GraphTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphTableViewCell.swift; sourceTree = "<group>"; };
+		9BBB45A91EABF17600616F8F /* OverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
+		9BBB45AB1EABF72F00616F8F /* RunTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +114,12 @@
 				9B50048F1EA06B7A00E071A6 /* AppDelegate.swift */,
 				9B5004911EA06B7A00E071A6 /* ViewController.swift */,
 				9B5004931EA06B7A00E071A6 /* Main.storyboard */,
+				9BBB45A71EABED7400616F8F /* GraphTableViewCell.swift */,
+				9BBB45A91EABF17600616F8F /* OverviewViewController.swift */,
+				9BBB45AB1EABF72F00616F8F /* RunTableViewCell.swift */,
+				9BBB45681EA4686000616F8F /* LoginViewController.swift */,
+				9B5004C01EA079D900E071A6 /* ProfileTableViewCell.swift */,
+				9BBB45661EA442C400616F8F /* WeatherTableViewCell.swift */,
 				9B5004991EA06B7A00E071A6 /* Assets.xcassets */,
 				9B50049B1EA06B7A00E071A6 /* LaunchScreen.storyboard */,
 				9B50049E1EA06B7A00E071A6 /* Info.plist */,
@@ -265,7 +283,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BBB45AC1EABF72F00616F8F /* RunTableViewCell.swift in Sources */,
+				9BBB45691EA4686000616F8F /* LoginViewController.swift in Sources */,
+				9BBB45A81EABED7400616F8F /* GraphTableViewCell.swift in Sources */,
+				9BBB45671EA442C400616F8F /* WeatherTableViewCell.swift in Sources */,
 				9B5004921EA06B7A00E071A6 /* ViewController.swift in Sources */,
+				9B5004C11EA079D900E071A6 /* ProfileTableViewCell.swift in Sources */,
+				9BBB45AA1EABF17600616F8F /* OverviewViewController.swift in Sources */,
 				9B5004981EA06B7A00E071A6 /* Runalyze.xcdatamodeld in Sources */,
 				9B5004901EA06B7A00E071A6 /* AppDelegate.swift in Sources */,
 			);
@@ -518,6 +542,7 @@
 				9B5004B91EA06B7A00E071A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B5004BA1EA06B7A00E071A6 /* Build configuration list for PBXNativeTarget "RunalyzeTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +551,7 @@
 				9B5004BC1EA06B7A00E071A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B5004BD1EA06B7A00E071A6 /* Build configuration list for PBXNativeTarget "RunalyzeUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +560,7 @@
 				9B5004BF1EA06B7A00E071A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
