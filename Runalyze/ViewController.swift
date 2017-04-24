@@ -72,7 +72,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         if(indexPath.section == 0){
             let cell:ProfileTableViewCell = tableView.dequeueReusableCell(withIdentifier: "profile") as! ProfileTableViewCell
-            cell.userNameLabel.text = "Marie P."
+            cell.userNameLabel.text = "Jane Doe"
             cell.backgroundColor = ProfileColor
             return cell
         }
@@ -87,12 +87,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.HotImage.image = UIImage(named: "hot2")
             cell.WarmImage.image = UIImage(named: "warm")
             cell.ColdImage.image = UIImage(named: "cold")
-            cell.BestHot.text = "Best Pace: \(1)"
-            cell.WorstHot.text = "Worst Pace: \(1)"
-            cell.BestWarm.text = "Best Pace: \(1)"
-            cell.WorstWarm.text = "Worst Pace: \(1)"
-            cell.BestCold.text = "Best Pace: \(1)"
-            cell.WorstCold.text = "Worst Pace: \(1)"
+            cell.BestHot.text = "Best Pace: \(2.8)"
+            cell.WorstHot.text = "Worst Pace: \(2.0)"
+            cell.BestWarm.text = "Best Pace: \(3.13)"
+            cell.WorstWarm.text = "Worst Pace: \(3.06)"
+            cell.BestCold.text = "Best Pace: \(3.14)"
+            cell.WorstCold.text = "Worst Pace: \(2.78)"
             
             return cell
         }
@@ -107,12 +107,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.HotImage.image = UIImage(named: "morning2")
             cell.WarmImage.image = UIImage(named: "afternoon")
             cell.ColdImage.image = UIImage(named: "night")
-            cell.BestHot.text = "Best Pace: \(1)"
-            cell.WorstHot.text = "Worst Pace: \(1)"
-            cell.BestWarm.text = "Best Pace: \(1)"
-            cell.WorstWarm.text = "Worst Pace: \(1)"
-            cell.BestCold.text = "Best Pace: \(1)"
-            cell.WorstCold.text = "Worst Pace: \(1)"
+            cell.BestHot.text = "Best Pace: \(3.1)"
+            cell.WorstHot.text = "Worst Pace: \(2.5)"
+            cell.BestWarm.text = "Best Pace: \(2.5)"
+            cell.WorstWarm.text = "Worst Pace: \(2.1)"
+            cell.BestCold.text = "Best Pace: \(2.9)"
+            cell.WorstCold.text = "Worst Pace: \(2.7)"
             
             return cell
         }
