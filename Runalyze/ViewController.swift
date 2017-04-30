@@ -13,15 +13,88 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        JSONDictionary = convertToDictionary(text: getJSON())!
+        print(JSONDictionary)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
 
     @IBOutlet weak var tableView: UITableView!
     let ProfileColor = #colorLiteral(red: 0.4998707175, green: 0.7019998431, blue: 0.9146463275, alpha: 1)
+    var JSONDictionary:Dictionary<String, Int>!
+    
+    func getJSON() -> String{
+        return "{\"short\": 35, \"high_elev\": 3, \"sun\": 26, \"rain\": 16, \"cluster\": 2, \"hot\": 24, \"long\": 7,\"cold\": 1, \"low_elev\": 39, \"mod\": 17, \"morning\":27,  \"evening\":10,  \"night\":7}"
+    }
+    
+    func convertToDictionary(text: String) -> [String: Int]? {
+        if let data = text.data(using: .utf8) {
+            do {
+                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Int]
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        return nil
+    }
+    
+    func getBestTimeofDay() -> [String]{
+        
+        
+        if((JSONDictionary["morning"]! >= JSONDictionary["evening"]!)  && (JSONDictionary["morning"]! >= JSONDictionary["night"]!)){
+             return ["Morning", "morning2"]
+        }
+        else if((JSONDictionary["evening"]! >= JSONDictionary["morning"]!)  && (JSONDictionary["evening"]! >= JSONDictionary["night"]!)){
+            return ["Afternoon", "afternoon"]
+
+        }
+        else{
+            return ["Night", "night"]
+            
+        }
+
+        
+    
+    }
+    
+    func getBestElevation() -> [String]{
+        
+        
+        if((JSONDictionary["low_elev"]! > JSONDictionary["high_elev"]!)){
+            return ["High", "mountainlevel"]
+        }
+        else{
+            return ["Low", "sealevel"]
+        }
+            
+        
+        
+    }
+    
+    func getBestTemperature() -> [String]{
+        
+        
+        if((JSONDictionary["hot"]! >= JSONDictionary["mod"]!)  && (JSONDictionary["hot"]! >= JSONDictionary["cold"]!)){
+            return ["Hot", "hot2"]
+        }
+        else if((JSONDictionary["mod"]! >= JSONDictionary["hot"]!)  && (JSONDictionary["mod"]! >= JSONDictionary["cold"]!)){
+            return ["War", "warm"]
+            
+        }
+        else{
+            return ["Cold", "cold"]
+            
+        }
+        
+        
+    }
+    
+    
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
@@ -146,14 +219,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.WarmSub.text = " "
             cell.ColdMain.text = "Elevation"
             cell.ColdSub.text = " "
-            cell.HotImage.image = UIImage(named: "warm")
-            cell.WarmImage.image = UIImage(named: "morning2")
-            cell.ColdImage.image = UIImage(named: "sealevel")
-            cell.BestHot.text = "Warm"
+            cell.HotImage.image = UIImage(named: getBestTemperature()[1])
+            cell.WarmImage.image = UIImage(named: getBestTimeofDay()[1])
+            cell.ColdImage.image = UIImage(named: getBestElevation()[1])
+            cell.BestHot.text = getBestTemperature()[0]
             cell.WorstHot.text = " "
-            cell.BestWarm.text = "Morning"
+            cell.BestWarm.text = getBestTimeofDay()[0]
             cell.WorstWarm.text = " "
-            cell.BestCold.text = "Sea Level"
+            cell.BestCold.text = getBestElevation()[0]
             cell.WorstCold.text = " "
             
             return cell

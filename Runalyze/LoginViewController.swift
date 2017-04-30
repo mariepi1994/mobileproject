@@ -9,7 +9,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
     
     @IBOutlet weak var activity: UIActivityIndicatorView!
     let flag = false
@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
         activity.alpha = 0.0
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -36,5 +36,5 @@ class LoginViewController: UIViewController {
         
     }
     
-
+    
 }
